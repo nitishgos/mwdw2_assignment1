@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7</title>
+</head>
+<body>
+    <script>
+        function sumArray(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (typeof numbers[i] === 'number') {
+            sum += numbers[i];
+        } else {
+            document.write("Non-numeric value found at index " + i + ", skipping...");
+        }
+    }
+    return sum;
+}
+
+// Example usage:
+const numbers = [1, 2, 3, 4, 5];
+document.write(sumArray(numbers)); // Output: 15
+
+    </script>
+</body>
+</html>

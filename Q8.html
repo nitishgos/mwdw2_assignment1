@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8</title>
+</head>
+<body>
+    <script>
+        function getType(input) {
+    return typeof input;
+}
+
+// Example usage:
+document.write(getType(5)+"<br>");       // Output: "number"
+document.write(getType("hello")+"<br>"); // Output: "string"
+document.write(getType(true)+"<br>" );    // Output: "boolean"
+document.write(getType({})+"<br>" );      // Output: "object"
+document.write(getType([])+"<br>" );      // Output: "object" (arrays are of type "object")
+document.write(getType(null)+"<br>" );    // Output: "object" (typeof null is "object", which is a JavaScript quirk)
+document.write(getType(undefined)+"<br>" ); // Output: "undefined"
+
+    </script>
+</body>
+</html>

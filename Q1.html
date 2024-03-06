@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Clock</title>
+  <style>
+    #clock {
+      font-size: 36px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="clock"></div>
+
+  <script>
+    function updateClock() {
+      var date = new Date();
+      var h = addZero(date.getHours());
+      var m = addZero(date.getMinutes());
+      var s = addZero(date.getSeconds());
+      var time = h + ":" + m + ":" + s;
+      document.getElementById("clock").innerHTML = time;
+    }
+
+    function addZero(num) {
+      return (num < 10 ? '0' : '') + num;
+    }
+
+    // Call updateClock function every second
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>

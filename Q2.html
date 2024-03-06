@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    <script>
+        function isValidURL(url) {
+    // Regular expression to match URL pattern
+    var urlPattern = /^(?:https?|ftp):\/\/(?:(?:[a-z0-9-]+\.)+[a-z]{2,}|localhost|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(?::\d+)?(?:\/[^\s]*)?$/i;
+    
+    // Test the URL against the pattern
+    return urlPattern.test(url);
+}
+
+// Example usage:
+var url = "https://www.google.com";
+if (isValidURL(url)) {
+    document.write("Valid URL");
+} else {
+    document.write("Invalid URL");
+}
+
+    </script>
+</body>
+</html>

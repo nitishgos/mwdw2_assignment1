@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+<body>
+    <script>
+        function isPrime(number) {
+    // Check if number is less than 2, which cannot be prime
+    if (number < 2) {
+        return false;
+    }
+    // Check for divisibility by numbers up to the square root of the given number
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Test the function
+const num = 23; // Change the number to test here
+if (isPrime(num)) {
+    document.write(num + ' is a prime number.');
+} else {
+    document.write(num + ' is not a prime number.');
+}
+
+    </script>
+</body>
+</html>

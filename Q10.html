@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10</title>
+</head>
+<body>
+    <script>
+        class Book {
+  constructor(title, author, publicationYear) {
+    this.title = title;
+    this.author = author;
+    this.publicationYear = publicationYear;
+  }
+
+  displayDetails() {
+    document.write(`Title: ${this.title}`+"<br>");
+    document.write(`Author: ${this.author}`+"<br>");
+    document.write(`Publication Year: ${this.publicationYear}`+"<br>");
+  }
+}
+
+class Ebook extends Book {
+  constructor(title, author, publicationYear, price) {
+    super(title, author, publicationYear);
+    this.price = price;
+  }
+
+  displayDetails() {
+    super.displayDetails();
+    document.write(`Price: $${this.price}`+"<br>");
+  }
+}
+
+// Creating an instance of the 'Ebook' class
+const myEbook = new Ebook("Sample Ebook", "John Doe", 2023, 9.99);
+
+// Displaying the details of the ebook
+myEbook.displayDetails();
+
+    </script>
+</body>
+</html>

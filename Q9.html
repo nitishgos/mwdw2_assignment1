@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+</head>
+<body>
+    <script>
+        class University {
+  constructor(name) {
+    this.name = name;
+    this.departments = [];
+  }
+
+  // Method to add a department
+  addDepartment(department) {
+    this.departments.push(department);
+  }
+
+  // Method to remove a department
+  removeDepartment(department) {
+    const index = this.departments.indexOf(department);
+    if (index !== -1) {
+      this.departments.splice(index, 1);
+    } else {
+      document.write(`${department} department does not exist.`);
+    }
+  }
+
+  // Method to display all departments
+  displayDepartments() {
+    document.write(`Departments in ${this.name}:`);
+    if (this.departments.length === 0) {
+      document.write("No departments available.");
+    } else {
+      this.departments.forEach(department => {
+        document.write(department);
+      });
+    }
+  }
+}
+
+// Create an instance of University class
+const myUniversity = new University("My University");
+
+// Add departments
+myUniversity.addDepartment("Computer Science");
+myUniversity.addDepartment("Electrical Engineering");
+myUniversity.addDepartment("Mathematics");
+
+// Display all departments
+myUniversity.displayDepartments();
+
+// Remove a department
+myUniversity.removeDepartment("Electrical Engineering");
+
+// Display all departments after removal
+myUniversity.displayDepartments();
+
+    </script>
+</body>
+</html>
